@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Income and Expense Tracker</title>
+</head>
+
+<body>
+    <header>
+        <h1>Income and Expense Tracker</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Add Income/Expense</h2>
+            <form action="IncomeExpenseServlet" method="post">
+                <div class="input-group">
+                    <label for="type">Transaction Type</label>
+                    <select name="type" id="type" required>
+                        <option value="">Select Type</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter Amount" required>
+                </div>
+                <button class="btn" type="submit">Add Transaction</button>
+            </form>
+            <div class="message-box">
+                <p class="success-msg">${param.success}</p>
+                <p class="error-msg">${param.error}</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        <div class="dev-info">
+            <span class="developer-text">Developed by Your Name</span>
+        </div>
+    </footer>
+</body>
+
+</html>

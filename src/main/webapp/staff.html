@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add Staff</title>
+</head>
+
+<body>
+    <header>
+        <h1>Staff Management System</h1>
+    </header>
+
+    <hr style="border: 1px solid #f7c948; margin: 40px 0;"> <!-- Dividing line above the container -->
+
+    <main class="container" style="margin: 0 auto;"> <!-- Centering the container -->
+        <section class="form-section" style="padding: 40px; border-radius: 15px; margin: 0;"> <!-- Removed margin -->
+            <h2>Add New Staff</h2>
+            <form action="AddStaffServlet" method="post" aria-labelledby="add-staff-form">
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Name" required aria-required="true">
+                </div>
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="role">Role</label>
+                    <input type="text" name="role" id="role" placeholder="Enter Role" required aria-required="true">
+                </div>
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="salary">Salary</label>
+                    <input type="number" name="salary" id="salary" placeholder="Enter Salary" required aria-required="true">
+                </div>
+                <button type="submit" class="btn">Add Staff</button>
+            </form>
+
+            <div class="message-box" style="margin-top: 25px;">
+                <p class="success-msg" style="padding: 10px; margin: 0;">${param.success}</p>
+                <p class="error-msg" style="padding: 10px; margin: 0;">${param.error}</p>
+            </div>
+        </section>
+
+        <section class="form-section" style="padding: 40px; border-radius: 15px; margin: 0;"> <!-- Added new section for deleting staff -->
+            <h2>Delete Staff</h2>
+            <form action="DeleteStaffServlet" method="post" aria-labelledby="delete-staff-form">
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="staffId">Select Staff to Delete</label>
+                    <select name="staffId" id="staffId" required aria-required="true">
+                        <option value="" disabled selected>Select Staff</option>
+                        <!-- Dynamically populate this list with staff members -->
+                        <option value="1">John Doe</option>
+                        <option value="2">Jane Smith</option>
+                        <option value="3">Alice Johnson</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <button type="submit" class="btn">Delete Staff</button>
+            </form>
+
+            <div class="message-box" style="margin-top: 25px;">
+                <p class="success-msg" style="padding: 10px; margin: 0;">${param.deleteSuccess}</p>
+                <p class="error-msg" style="padding: 10px; margin: 0;">${param.deleteError}</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 40px;"> <!-- Added margin-top for spacing -->
+        <div class="dev-info">
+            <p class="developer-text">Developed by Your Company</p>
+        </div>
+    </footer>
+</body>
+
+</html>

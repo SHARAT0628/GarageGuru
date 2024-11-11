@@ -1,0 +1,324 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff9db; /* Light Yellow */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header styles */
+header {
+    background-color: #f7c948; /* Classic Yellow */
+    color: #333;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #fbc02d;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Navigation styles */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #ffeb99; /* Vibrant Yellow */
+    color: #333;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #f7c948; /* Classic Yellow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Button Styling */
+.btn {
+    background-color: #f7c948; /* Classic Yellow */
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin: 15px;
+    width: calc(100% - 40px);
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #e6b800; /* Darker Yellow */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Login Button Styling */
+#login-button {
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    border: 2px solid #388E3C; /* Darker green border */
+    padding: 15px 30px; /* Consistent padding */
+    border-radius: 12px; /* Match other buttons */
+    font-size: 1.2em; /* Consistent font size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added box-shadow transition */
+    display: inline-block; /* Ensure it behaves like a button */
+    margin: 15px; /* Consistent margin */
+    width: calc(100% - 40px); /* Full width minus margins */
+    max-width: 350px; /* Limit max width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+#login-button:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: translateY(0); /* Reset lift on click */
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 40px;
+    background-color: #fffbeb; /* Soft Yellow Background */
+}
+
+/* Container for Forms and Content */
+.container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    margin: auto;
+    border: 4px solid #f7c948; /* Classic Yellow */
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #f7c948; /* Classic Yellow */
+    border-radius: 10px;
+    font-size: 1.1em;
+    background-color: #fffbeb; /* Soft Yellow */
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #e6b800; /* Darker Yellow */
+}
+
+/* Message Box Styling */
+.message-box {
+    margin-top: 25px;
+}
+
+.success-msg {
+    color: green;
+}
+
+.error-msg {
+    color: red;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #f7c948; /* Classic Yellow */
+    color: #333;
+    border-top: 5px solid #fbc02d;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Developer Info */
+.dev-info {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Statistics Section */
+.statistics {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.statistics h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Stats Cards */
+.stats-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fffbeb; /* Soft Yellow */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stats-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .btn {
+        max-width: 100%;
+    }
+
+    #login-button {
+        max-width: 100%; /* Full width for login button on small screens */
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #fff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #444; /* Darker header and footer */
+}
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group select {
+    background-color: #555; /* Dark input background */
+    color: #fff;
+    border-color: #777; /* Lighter border */
+}
+
+body.dark-mode .input-group input:focus,
+body.dark-mode .input-group select:focus {
+    border-color: #ffcc00; /* Highlight border in dark mode */
+}
+
+body.dark-mode .btn {
+    background-color: #ffcc00; /* Button in dark mode */
+    color: #333;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #f7c948; /* Dark mode button hover */
+}
+
+body.dark-mode #login-button {
+    background-color: #45a049; /* Dark mode login button */
+    color: #fff;
+}
+
+body.dark-mode #login-button:hover {
+    background-color: #3e8e41; /* Darker on hover */
+}

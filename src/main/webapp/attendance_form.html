@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Attendance Form</title>
+</head>
+<body>
+    <header>
+        <h1>Staff Management System</h1>
+    </header>
+
+    <main class="container" style="margin: 40px auto;">
+        <section class="form-section" style="padding: 40px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); margin: 0;">
+            <h2>Mark Attendance</h2>
+            <form action="AttendanceServlet" method="post" aria-labelledby="attendance-form">
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="staff">Select Staff Member</label>
+                    <select name="staff" id="staff" required aria-required="true">
+                        <option value="" disabled selected>Select Staff</option>
+                        <option value="staff1">Staff Member 1</option>
+                        <option value="staff2">Staff Member 2</option>
+                        <option value="staff3">Staff Member 3</option>
+                        <!-- Add more staff members as needed -->
+                    </select>
+                </div>
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required aria-required="true">
+                </div>
+                <div class="input-group" style="padding-bottom: 20px;">
+                    <label for="status">Attendance Status</label>
+                    <select name="status" id="status" required aria-required="true">
+                        <option value="" disabled selected>Select Status</option>
+                        <option value="present">Present</option>
+                        <option value="absent">Absent</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Submit Attendance</button>
+            </form>
+
+            <div class="message-box" style="margin-top: 25px;">
+                <p class="success-msg" style="padding: 10px; margin: 0;">${param.success}</p>
+                <p class="error-msg" style="padding: 10px; margin: 0;">${param.error}</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 40px;">
+        <div class="dev-info">
+            <p class="developer-text">Developed by Your Company</p>
+        </div>
+    </footer>
+</body>
+</html>
